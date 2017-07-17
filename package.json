@@ -1,0 +1,26 @@
+{
+  "name": "mower-test",
+  "version": "1.0.0",
+  "description": "Test for contentsquare",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app/index.js",
+    "test": "grunt unit",
+    "coverage": "grunt coverage"
+  },
+  "author": "MICHELET Thomas",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "chai": "4.1.0",
+    "grunt": "1.0.1",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-env": "0.4.4",
+    "grunt-istanbul": "0.8.0",
+    "grunt-mocha-test": "0.13.2",
+    "mocha": "3.4.2"
+  }
+}
