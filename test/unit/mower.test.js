@@ -9,8 +9,17 @@ const Mower = requireHelper('lib/mower');
 describe('# Unit tests Mover 1 2 N on Grass 5 5', function() {
   const grass = new Grass(5,5);
   const mower = new Mower(1, 2, 'N');
+  it('new Mower("a", "b", "N") throw "Mower coordinates must be numbers"', function() {
+    expect(() => new Mower('a','b','N')).to.be.throw('Mower coordinates must be numbers');
+  });
+  it('new Mower(1, 2, "C") throw "Mower orientation must be in N,E,S,W"', function() {
+    expect(() => new Mower(1,2,'C')).to.be.throw('Mower orientation must be in N,E,S,W');
+  });
   it('rotate is a function', function() {
     expect(mower.rotate).to.be.a('function');
+  });
+  it('rotate(Z) throw Mower direction must be in L,R', function() {
+    expect(() => mower.rotate('Z').to.be.throw('Mower direction must be in L,R'));
   });
   it('rotate(L) === 1 2 W', function() {
     mower.rotate('L');

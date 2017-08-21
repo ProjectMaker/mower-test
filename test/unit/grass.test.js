@@ -8,6 +8,10 @@ const Grass = requireHelper('lib/grass');
 describe('# Unit tests Grass 5 5', function() {
   const grass = new Grass(5,5);
 
+  it('new Grass("a","b") throw "Grass coordinates must be numbers"', function() {
+    expect(() => new Grass('a','b')).to.be.throw('Grass coordinates must be numbers');
+  });
+
   it('isInside is a function', function() {
     expect(grass.isInside).to.be.a('function');
   });
