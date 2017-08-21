@@ -1,5 +1,3 @@
-const _ = require('underscore');
-
 const ORIENTATIONS = ['N','E','S','W'];
 const DIRECTIONS = ['L','R'];
 
@@ -14,7 +12,7 @@ const Mower = class {
    * @param orientation {string}
    */
   constructor(col, row, orientation) {
-    if (_.isNaN(col) || _.isNaN(row)) throw new Error('Mower coordinates must be numbers');
+    if (isNaN(col) || isNaN(row)) throw new Error('Mower coordinates must be numbers');
     if (ORIENTATIONS.indexOf(orientation) === -1) throw new Error(`Mower orientation must be in ${ORIENTATIONS.join(',')}`);
 
     this.col = col;

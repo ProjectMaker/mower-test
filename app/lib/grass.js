@@ -1,5 +1,3 @@
-const _ = require('underscore');
-
 /**
  * Grass is the surface to be mowed
  */
@@ -10,7 +8,7 @@ const Grass = class {
    * @param nbRows {number}
    */
   constructor(nbCols, nbRows) {
-    if (_.isNaN(nbCols) || _.isNaN(nbRows)) throw new Error('Grass coordinates must be numbers')
+    if (isNaN(nbCols) || isNaN(nbRows)) throw new Error('Grass coordinates must be numbers')
 
     this.nbCols = nbCols;
     this.nbRows = nbRows;
